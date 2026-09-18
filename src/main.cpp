@@ -36,14 +36,14 @@ std::string parseHeader(const std::string &path)
 
     file.read(json.data(), n);
 
-    // Read the first 200 char
-    std::cout << json.substr(0,200) << '\n';
-
     if (!file)
     {
         std::cerr << "Error: Failed to open JSON header\n";
         return "";
     }
+
+    // Read the first 200 char
+    std::cout << json.substr(0, 200) << '\n';
 
     // weightsSize = total file size - 8 - JSON header size
     uint64_t fileSize = std::filesystem::file_size(path);
@@ -52,7 +52,6 @@ std::string parseHeader(const std::string &path)
     std::cout << "Weights blob size: "
               << weightsSize
               << " bytes\n";
-
 
     return json;
 }
@@ -67,7 +66,7 @@ int main(int argc, char *argv[])
 
     std::string json = parseHeader(argv[1]);
 
-    if(json.empty())
+    if (json.empty())
     {
         return 1;
     }

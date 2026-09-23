@@ -1,0 +1,4 @@
+numpy==2.5.3
+safetensors==0.8.0
+torch==2.14.0+cpu # Installed from CPU index - Feel free to get the GPU version...
+transformers==5.17.0

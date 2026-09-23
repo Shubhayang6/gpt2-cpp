@@ -2,5 +2,7 @@ build/
 models/
 *.bin
 __pycache__/
+.venv/
 .vscode/
+.vs/
 *.exe

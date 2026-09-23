@@ -15,10 +15,8 @@ cmake -S . -B build
 cmake --build build --config Release
 
 ## Python Build
-## Python reference (validation only)
 ```
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
-pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r scripts/requirements.txt
 ```

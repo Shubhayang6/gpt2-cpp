@@ -1,2 +1,7 @@
-.venv
 build/
+models/
+.venv/
+__pycache__/
+*.bin
+.vs/
+.vscode/

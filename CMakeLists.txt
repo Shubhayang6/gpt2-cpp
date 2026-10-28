@@ -8,6 +8,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(gpt2 src/main.cpp)
 
+target_include_directories(gpt2 PRIVATE third_party)
+
 if(MSVC)
     target_compile_options(gpt2 PRIVATE /W4 /permissive-)
 else()
